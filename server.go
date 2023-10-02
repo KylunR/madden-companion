@@ -16,10 +16,10 @@ func handler(w http.ResponseWriter, req *http.Request) {
 		log.Fatal(err)
 	}
 
+	log.Println("Request: ", req)
 	log.Printf("Request Body: %s", reqBody)
 
 	fmt.Fprintf(w, "Hi! %s", req.URL.Path[1:])
-	// log.Println("Request: ", req)
 
 	w.WriteHeader(http.StatusOK)
 }
