@@ -12,10 +12,11 @@ func handler(w http.ResponseWriter, req *http.Request) {
 	decoder := json.NewDecoder(req.Body)
 
 	var t interface{}
-	err := decoder.Decode(&t)
-	if err != nil {
-		panic(err)
-	}
+	// err := decoder.Decode(&t)
+	// if err != nil {
+	// 	panic(err)
+	// }
+	decoder.Decode(&t)
 	log.Println("Request body: ", t)
 
 	fmt.Fprintf(w, "Hi! %s", req.URL.Path[1:])
