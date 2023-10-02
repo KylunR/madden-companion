@@ -20,6 +20,8 @@ func handler(w http.ResponseWriter, req *http.Request) {
 
 	fmt.Fprintf(w, "Hi! %s", req.URL.Path[1:])
 	// log.Println("Request: ", req)
+
+	w.WriteHeader(http.StatusOK)
 }
 
 func main() {
