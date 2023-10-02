@@ -9,6 +9,8 @@ import (
 
 func handler(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprintf(w, "Hi! %s", req.URL.Path[1:])
+	log.Println(w)
+	log.Println(req)
 }
 
 func main() {
