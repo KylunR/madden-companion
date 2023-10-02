@@ -27,7 +27,7 @@ func handler(w http.ResponseWriter, req *http.Request) {
 func main() {
 	port := os.Getenv("PORT")
 
-	http.HandleFunc("//pc/3334523/leagueteams", handler)
+	http.HandleFunc("/pc/3334523/leagueteams", handler)
 	// log.Fatal(http.ListenAndServe(":8000", nil))
 	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
